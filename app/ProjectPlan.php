@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use PhpParser\Node\Expr\Print_;
 
 class ProjectPlan extends Model
@@ -190,8 +191,8 @@ class ProjectPlan extends Model
   	}
   	
   	public function getBallDetails() {
-  		$balls = 'red,red,green,yellow,red,green,yellow,yellow,yellow,yellow';//file_get_contents("balls.txt");
-  		
+  		//$balls = 'red,red,green,yellow,red,green,yellow,yellow,yellow,yellow';//file_get_contents("balls.txt");
+  		$balls = Storage::get('balls.txt');
   		$ballDetails = array();
   		$ballDetails[] = 'Balls: '.$balls;
   		
