@@ -1,0 +1,16 @@
+RewriteEngine on
+Options -Indexes 
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+
+
+RewriteEngine on 
+RewriteCond %{HTTP_REFERER} !^http://10.140.179.123 [NC] 
+RewriteCond %{HTTP_REFERER} !^http://10.140.179.123.*$ [NC] 
+RewriteRule \.(gif|jpg)$ - [F]
+
+Header always set X-Frame-Options SAMEORIGIN
