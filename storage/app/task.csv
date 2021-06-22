@@ -1,0 +1,19 @@
+Designing 1,3,1
+Designing 2,3,1
+Database migrations,1,2
+Implement Backend Base library,5,3
+Implement UI Base library,3,3
+Build UI for users list page,5,4
+Implement backend for users list page,3,4
+Add filters for users list page,4,5
+Build Create new user page,3,5
+Build Update user page,2,6
+Assign roles,7,7
+Deactivate users,3,7
+Export user details in PDF,4,7
+Export users in Excel,4,7
+Reactivate users,2,7
+Dev testing 1,3,8
+Dev testing 2,3,8
+Defect fixes 1,3,8
+Defect fixes 2,3,9
