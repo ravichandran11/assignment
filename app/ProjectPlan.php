@@ -18,27 +18,14 @@ class ProjectPlan extends Model
 		$this->developer2DaysAssigned = 0;
 		$this->sprint = 1;
 		
-		$taskDetails = array(
-				0 => array('Designing 1',3,1),
-				1 => array('Designing 2',3,1),
-				2 => array('Database migrations',1,2),
-				3 => array('Implement Backend Base library',5,3),
-				4 => array('Implement UI Base library',3,3),
-				5 => array('Build UI for users list page',5,4),
-				6 => array('Implement backend for users list page',3,4),
-				7 => array('Add filters for users list page',4,5),
-				8 => array('Build Create new user page',3,5),
-				9 => array('Build Update user page',2,6),
-				10 => array('Assign roles',7,7),
-				11 => array('Deactivate users',3,7),
-				12 => array('Export user details in PDF',4,7),
-				13 => array('Export users in Excel',4,7),
-				14 => array('Reactivate users',2,7),
-				15 => array('Dev testing 1',3,8),
-				16 => array('Dev testing 2',3,8),
-				17 => array('Defect fixes 1',3,8),
-				18 => array('Defect fixes 2',3,9)
-		);
+		$fileTask = storage_path('app/task.csv');
+		$fileHandle = fopen($fileTask, "r");
+		$taskDetails = array();
+		while ( ($dataTask = fgetcsv($fileHandle, 200, ",")) !==FALSE) {
+			$taskDetails[] = array( $dataTask[0], $dataTask[1], $dataTask[2]);
+		}
+		fclose($fileHandle);
+		//echo '<pre>'; print_r($taskDetails); die;
 		
 		$taskDetailsPriority = array();
 		foreach($taskDetails as $taskDetail) {
