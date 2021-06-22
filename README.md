@@ -21,7 +21,7 @@ where
 Output:
 =======
 Url:
-http://<<hostname>>/projectplan/ballassignment
+http://hostname/projectplan/ballassignment
 
 Assignment 1:
 -------------
@@ -41,7 +41,7 @@ Weighted average of yellow balls: 0.29
 
 ==========================================================================
 Url:
-http://<<hostname>>/projectplan
+http://hostname/projectplan
 
 Assignment 2:
 -------------
