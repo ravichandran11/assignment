@@ -20,6 +20,8 @@ where
 
 Output:
 =======
+Url:
+http://<<hostname>>/projectplan/ballassignment
 
 Assignment 1:
 -------------
@@ -37,7 +39,9 @@ Weighted average of red balls: 0.57
 Weighted average of green balls: 0.14
 Weighted average of yellow balls: 0.29
 
-
+==========================================================================
+Url:
+http://<<hostname>>/projectplan
 
 Assignment 2:
 -------------
